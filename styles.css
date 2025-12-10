@@ -1018,3 +1018,178 @@ a {
   will-change: transform;
   transition: transform 0.25s ease-out;
 }
+
+
+/* ===================== CLICK SPARK EFFECT ===================== */
+
+.click-spark-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.click-spark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--spark-size, 10px);
+  height: var(--spark-size, 10px);
+  border-radius: 999px;
+  background: radial-gradient(circle at center, var(--spark-color, #ffffff), rgba(255,255,255,0.1));
+  transform: translate(-50%, -50%) scale(0.2);
+  animation: click-spark-move var(--spark-duration, 400ms) ease-out forwards;
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.65),
+    0 0 24px rgba(255,255,255,0.35);
+}
+
+@keyframes click-spark-move {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(var(--scale, 1));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0.1);
+  }
+}
+
+
+
+/* ===================== ELECTRIC BORDER (React Bits style adaptation) ===================== */
+
+.electric-border {
+  --electric-border-color: #7df9ff;
+  --electric-light-color: oklch(from var(--electric-border-color) l c h);
+  --eb-border-width: 2px;
+  position: relative;
+  border-radius: inherit;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.electric-border .eb-content {
+  position: relative;
+  border-radius: inherit;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.electric-border .product-card {
+  border-radius: inherit;
+}
+
+.eb-svg {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.001;
+  pointer-events: none;
+}
+
+.eb-layers {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.eb-stroke,
+.eb-glow-1,
+.eb-glow-2,
+.eb-background-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.eb-stroke {
+  border: var(--eb-border-width) solid var(--electric-border-color);
+}
+
+.eb-glow-1 {
+  border: var(--eb-border-width) solid oklch(from var(--electric-border-color) l c h / 0.6);
+  opacity: 0.7;
+  filter: blur(calc(0.5px + (var(--eb-border-width) * 0.25)));
+}
+
+.eb-glow-2 {
+  border: var(--eb-border-width) solid var(--electric-light-color);
+  opacity: 0.5;
+  filter: blur(calc(2px + (var(--eb-border-width) * 0.5)));
+}
+
+.eb-background-glow {
+  z-index: -1;
+  transform: scale(1.05);
+  filter: blur(26px);
+  opacity: 0.28;
+  background: linear-gradient(-35deg, var(--electric-light-color), transparent, var(--electric-border-color));
+}
+
+.electric-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  box-shadow:
+    0 0 16px rgba(125, 249, 255, 0.9),
+    0 0 32px rgba(125, 249, 255, 0.6),
+    0 0 48px rgba(125, 249, 255, 0.35);
+  opacity: 0.75;
+  mix-blend-mode: screen;
+  animation: electric-flicker 2s infinite steps(6, end);
+  pointer-events: none;
+}
+
+@keyframes electric-flicker {
+  0%   { opacity: 0.4; transform: translate3d(0px, 0px, 0) scale(1.01); }
+  15%  { opacity: 0.9; transform: translate3d(0.5px,-0.5px, 0)  scale(1.02); }
+  30%  { opacity: 0.6; transform: translate3d(-0.4px,0.4px, 0)  scale(1.015); }
+  45%  { opacity: 1;   transform: translate3d(0.3px,-0.6px, 0)  scale(1.02); }
+  60%  { opacity: 0.5; transform: translate3d(-0.6px,0.2px, 0)  scale(1.01); }
+  75%  { opacity: 0.9; transform: translate3d(0.2px,0.3px, 0)   scale(1.018); }
+  100% { opacity: 0.4; transform: translate3d(0px, 0px, 0)      scale(1.01); }
+}
+
+/* ===================== SCROLL FLOAT TEXT EFFECT ===================== */
+
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.sf-char {
+  display: inline-block;
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translate3d(0, 120%, 0) scaleY(2.3) scaleX(0.7);
+  transform-origin: 50% 0%;
+}
+
+/* state after animation */
+.sf-char.sf-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scaleY(1) scaleX(1);
+  transition:
+    opacity 0.75s cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
