@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tapia's Hookah | Premium Hookahs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tapia's Hookah ofrece hookahs de lujo, combos y accesorios premium para noches inolvidables.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== INTRO CON VIDEO DE HUMO REAL (CORTA) ===== -->
+  <div class="intro-overlay" id="intro-overlay">
+    <!-- Video horizontal para desktop -->
+    <video class="intro-video intro-video-desktop" autoplay muted playsinline id="intro-video-desktop">
+      <source src="videos/humo-tapias.mp4" type="video/mp4">
+    </video>
+
+    <!-- Video vertical para móvil (usa mismo video por ahora, puedes reemplazarlo) -->
+    <video class="intro-video intro-video-mobile" autoplay muted playsinline id="intro-video-mobile">
+      <source src="videos/humo-tapias-vertical.mp4" type="video/mp4">
+    </video>
+
+    <div class="intro-content">
+      <img src="images/tapias-logo-purple.jpg" alt="Tapia's Hookah intro">
+    </div>
+    <div class="intro-loader-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <span class="logo-main">Tapia's</span>
+        <span class="logo-sub">HOOKAH</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#hero">Inicio</a>
+        <a href="#productos">Tienda</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#combos">Combos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="https://wa.me/59996602799" class="btn-whatsapp-header" target="_blank" rel="noopener">
+        Ordenar por WhatsApp
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav">
+      <a href="#hero">Inicio</a>
+      <a href="#productos">Tienda</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#combos">Combos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/59996602799" target="_blank" rel="noopener">Ordenar por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- ===== STAGGERED MENU OVERLAY ===== -->
+  <div id="staggered-menu" class="staggered-menu-wrapper" data-position="right" aria-hidden="true">
+    <div class="sm-prelayers" aria-hidden="true">
+      <div class="sm-prelayer" style="background:#B19EEF;"></div>
+      <div class="sm-prelayer" style="background:#5227FF;"></div>
+    </div>
+    <aside id="staggered-menu-panel" class="staggered-menu-panel" aria-label="Navegación principal">
+      <div class="sm-panel-inner">
+        <ul class="sm-panel-list">
+          <li class="sm-panel-itemWrap"><a href="#hero" class="sm-panel-item">INICIO</a></li>
+          <li class="sm-panel-itemWrap"><a href="#productos" class="sm-panel-item">TIENDA</a></li>
+          <li class="sm-panel-itemWrap"><a href="#experiencia" class="sm-panel-item">EXPERIENCIA</a></li>
+          <li class="sm-panel-itemWrap"><a href="#combos" class="sm-panel-item">COMBOS</a></li>
+          <li class="sm-panel-itemWrap"><a href="#faq" class="sm-panel-item">FAQ</a></li>
+          <li class="sm-panel-itemWrap"><a href="#contacto" class="sm-panel-item">CONTACTO</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+
+  <!-- ===== HERO ===== -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <!-- Capa visual de portada con pseudo 3D -->
+        <div class="parallax-layer" data-depth="0.38">
+          <div class="hero-card tilt-card fade-in-up card-hover-3d">
+            <img src="images/tapias-logo-purple.jpg" alt="Tapia's Hookah portada" />
+          </div>
+        </div>
+
+        <!-- Capa de texto hero con menor profundidad -->
+        <div class="parallax-layer" data-depth="0.18">
+          <div class="hero-text-block fade-in-up">
+          <p class="hero-tag">Hookahs de lujo</p>
+          <h1 class="scroll-float" data-sf-stagger="0.03">Tapia's Hookah Premium Experience.</h1>
+          <p class="hero-sub">
+            Diseño minimalista, materiales de alta calidad y sabores intensos.
+            Cada hookah está pensada para que tu noche se sienta diferente.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#productos" class="btn-primary hover-3d">Ver catálogo</a>
+            <a href="https://wa.me/59996602799" class="btn-ghost hover-3d" target="_blank" rel="noopener">
+              Ordenar por WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span>Calidad seleccionada</span>
+            <span>Asesoría personalizada</span>
+            <span>Ideal para casa &amp; eventos</span>
+          </div>
+        </div>
+      </div> <!-- fin parallax layer texto -->
+      </div>
+
+      <!-- Glow que sigue el mouse (mouse animation extra) -->
+      <div class="hero-mouse-glow" id="hero-mouse-glow"></div>
+    </section>
+
+    <!-- ===== PRODUCTOS DESTACADOS ===== -->
+    <section id="productos" class="section section-products">
+      <div class="section-header fade-in-up">
+        <p class="section-tag">Colección principal</p>
+        <h2>Hookahs destacadas</h2>
+        <p class="section-sub">
+          Modelos seleccionados por su diseño, estabilidad y flujo de aire.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="electric-border" style="--electric-border-color:#7df9ff; border-radius:18px;">
+          <div class="eb-content">
+            <article class="product-card card-hover-3d fade-in-up">
+              <div class="badge">Más vendido</div>
+              <div class="product-image"><img src="images/product-eclipse.jpg" alt="Hookah Tapia's verde en lounge"></div>
+              <h3>Eclipse Black</h3>
+              <p class="product-desc">
+                Hookah negra mate con acabado minimalista y base pesada para sesiones estables.
+              </p>
+              <div class="product-meta">
+                <span class="price">$XXX</span>
+                <a href="https://wa.me/59996602799" class="inline-link" target="_blank" rel="noopener">
+                  Ordenar este modelo
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="eb-layers">
+            <div class="eb-stroke"></div>
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-background-glow"></div>
+          </div>
+        </div>
+
+        <div class="electric-border" style="--electric-border-color:#7df9ff; border-radius:18px;">
+          <div class="eb-content">
+            <article class="product-card card-hover-3d fade-in-up">
+              <div class="badge badge-gold">Nuevo</div>
+              <div class="product-image"><img src="images/product-aurora.jpg" alt="Hookah Tapia's morado en mesa de lounge"></div>
+              <h3>Aurora Crystal</h3>
+              <p class="product-desc">
+                Cuerpo en vidrio resistente con detalles metálicos. Ideal para quienes quieren lujo visible.
+              </p>
+              <div class="product-meta">
+                <span class="price">$XXX</span>
+                <a href="https://wa.me/59996602799" class="inline-link" target="_blank" rel="noopener">
+                  Ordenar este modelo
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="eb-layers">
+            <div class="eb-stroke"></div>
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-background-glow"></div>
+          </div>
+        </div>
+
+        <div class="electric-border" style="--electric-border-color:#7df9ff; border-radius:18px;">
+          <div class="eb-content">
+            <article class="product-card card-hover-3d fade-in-up">
+              <div class="badge badge-dark">Pro</div>
+              <div class="product-image"><img src="images/product-inferno.jpg" alt="Hookah Tapia's en barra con luces"></div>
+              <h3>Inferno Pro</h3>
+              <p class="product-desc">
+                Pensada para lounges y eventos. Flujo de aire profesional y alta resistencia al uso intensivo.
+              </p>
+              <div class="product-meta">
+                <span class="price">$XXX</span>
+                <a href="https://wa.me/59996602799" class="inline-link" target="_blank" rel="noopener">
+                  Ordenar este modelo
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="eb-layers">
+            <div class="eb-stroke"></div>
+            <div class="eb-glow-1"></div>
+            <div class="eb-glow-2"></div>
+            <div class="eb-background-glow"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CATEGORÍAS ===== -->
+    <section id="categorias" class="section section-categories">
+      <div id="galaxy-bg" class="galaxy-container"></div>
+
+      <div class="categories-shell">
+        <div class="categories-left fade-in-up">
+          <p class="section-tag">Todo lo que necesitas</p>
+          <h2>Categorías</h2>
+          <p class="categories-lead">
+            Elige cómo quieres armar tu noche: desde la hookah completa hasta los sabores y el setup que la acompaña.
+          </p>
+          <div class="categories-chips">
+            <span class="chip">Hookahs completas</span>
+            <span class="chip">Mangueras &amp; boquillas</span>
+            <span class="chip">Carbones &amp; setup</span>
+            <span class="chip">Sabores &amp; combos</span>
+          </div>
+        </div>
+
+        <div class="categories-right">
+          <article class="category-layer layer-main card-hover-3d fade-in-up">
+            <h3>Hookahs completas</h3>
+            <p>Modelos listos para usar, ideales para casa, lounges o eventos privados.</p>
+            <span class="category-link">Ver modelos</span>
+          </article>
+
+          <article class="category-layer layer-side card-hover-3d fade-in-up">
+            <h3>Mangueras &amp; boquillas</h3>
+            <p>Opciones lavables, colores personalizados y boquillas de uso individual.</p>
+            <span class="category-link">Ver accesorios</span>
+          </article>
+
+          <article class="category-layer layer-side card-hover-3d fade-in-up">
+            <h3>Carbones &amp; setup</h3>
+            <p>Carbón de larga duración, pinzas y todo lo necesario para el montaje.</p>
+            <span class="category-link">Ver setup</span>
+          </article>
+
+          <article class="category-layer layer-wide card-hover-3d fade-in-up">
+            <div class="layer-wide-text">
+              <h3>Sabores &amp; combos</h3>
+              <p>Sabores clásicos e intensos, con combos listos para armar la noche.</p>
+              <span class="category-link">Ver sabores</span>
+            </div>
+            <div class="layer-wide-illu">
+              <img src="images/experience-ritual.png" alt="Grupo disfrutando de una hookah en un ambiente íntimo">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+<!-- ===== EXPERIENCIA TAPIA'S ===== -->
+    <section id="experiencia" class="section section-experience">
+      <div class="experience-inner">
+        <div class="experience-text fade-in-up">
+          <p class="section-tag">Experiencia Tapia's</p>
+          <h2 class="scroll-float" data-sf-stagger="0.025">Más que una hookah, un ritual.</h2>
+          <p>
+            En Tapia's Hookah seleccionamos cada pieza pensando en tu experiencia completa:
+            estética, estabilidad, flujo de aire y facilidad de limpieza.
+          </p>
+          <p>
+            Te ayudamos a elegir el modelo perfecto según tu estilo, espacio y uso:
+            desde sesiones íntimas en casa hasta noches largas con amigos o clientes.
+          </p>
+
+          <ul class="experience-list">
+            <li>Curaduría de modelos premium.</li>
+            <li>Asesoría directa por WhatsApp.</li>
+            <li>Opciones pensadas para casa, lounges y eventos.</li>
+            <li>Recomendaciones de sabores según tu gusto.</li>
+          </ul>
+
+</div>
+
+        <div class="experience-card card-hover-3d fade-in-up">
+          <p class="small-title">Tapia's Night Setup</p>
+          <p>Hookah + carbones + sabores seleccionados + guía rápida.</p>
+          <div class="pill-row">
+            <span>Minimalismo oscuro</span>
+            <span>Diseño premium</span>
+          </div>
+        
+      <div class="experience-illustration-wrapper fade-in-up">
+        <div class="experience-illustration">
+          <img src="images/experience-ritual.png" alt="Grupo disfrutando de una hookah en un ambiente íntimo">
+        </div>
+      </div>
+    </section
+
+    <!-- ===== COMBOS ===== -->
+    <section id="combos" class="section section-combos">
+      <div class="section-header fade-in-up">
+        <p class="section-tag">Combos listos</p>
+        <h2>Elige tu mood</h2>
+      </div>
+
+      <div class="combo-grid">
+        <article class="combo-card card-hover-3d fade-in-up">
+          <h3>Combo Starter – “Primera Nube”</h3>
+          <p>
+            Hookah básica de calidad, manguera, pinzas, carbón y sabor inicial.
+            Ideal para empezar sin complicaciones.
+          </p>
+          <ul>
+            <li>1 hookah completa</li>
+            <li>1 manguera</li>
+            <li>Carbones iniciales</li>
+            <li>1 sabor clásico</li>
+          </ul>
+          <a href="https://wa.me/59996602799" class="btn-secondary hover-3d" target="_blank" rel="noopener">
+            Quiero este combo
+          </a>
+        </article>
+
+        <article class="combo-card card-hover-3d fade-in-up">
+          <h3>Combo Premium – “Noche Élite”</h3>
+          <p>
+            Para los que quieren diseño y rendimiento en un solo set.
+          </p>
+          <ul>
+            <li>Hookah premium</li>
+            <li>Manguera lavable</li>
+            <li>Boquilla extra</li>
+            <li>Carbón de larga duración</li>
+            <li>3 sabores a elección</li>
+          </ul>
+          <a href="https://wa.me/59996602799" class="btn-secondary hover-3d" target="_blank" rel="noopener">
+            Quiero este combo
+          </a>
+        </article>
+
+        <article class="combo-card card-hover-3d fade-in-up">
+          <h3>Combo Party – “Full Friends”</h3>
+          <p>
+            Pensado para grupos, fiestas y reuniones largas.
+          </p>
+          <ul>
+            <li>Hookah grande</li>
+            <li>Extras de mangueras</li>
+            <li>Carbón extra</li>
+            <li>Variedad de sabores</li>
+          </ul>
+          <a href="https://wa.me/59996602799" class="btn-secondary hover-3d" target="_blank" rel="noopener">
+            Quiero este combo
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section section-faq">
+      <div class="section-header fade-in-up">
+        <p class="section-tag">Dudas rápidas</p>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item fade-in-up">
+          <summary>¿Hacen delivery?</summary>
+          <p>
+            Sí, realizamos entregas en la zona (según disponibilidad) y también
+            puedes coordinar recogida en punto acordado.
+          </p>
+        </details>
+
+        <details class="faq-item fade-in-up">
+          <summary>¿Qué métodos de pago aceptan?</summary>
+          <p>
+            Aceptamos efectivo y transferencias. Podemos confirmar métodos
+            específicos al momento de tu pedido por WhatsApp.
+          </p>
+        </details>
+
+        <details class="faq-item fade-in-up">
+          <summary>¿Las hookahs vienen listas para usar?</summary>
+          <p>
+            Sí, incluyen las piezas necesarias. Solo necesitas carbón y sabores.
+            También te damos una guía rápida de armado y mantenimiento.
+          </p>
+        </details>
+
+        <details class="faq-item fade-in-up">
+          <summary>¿Puedo personalizar colores o mangueras?</summary>
+          <p>
+            Según el modelo, podemos ofrecer opciones de color y mangueras extra.
+            Escríbenos por WhatsApp y te mostramos las alternativas.
+          </p>
+        </details>
+      </div>
+    </section>
+
+        <!-- ===== ABOUT US ===== -->
+    <section id="about" class="section section-about">
+      <div class="about-inner fade-in-up">
+        <div class="about-text">
+          <p class="section-tag">Sobre nosotros</p>
+          <h2>Tapia's Hookah, hecha para la noche</h2>
+          <p>
+            Tapia's Hookah nace para quienes quieren algo más que una hookah cualquiera:
+            buscamos que cada sesión se sienta como un pequeño ritual, con buen humo, sabores
+            limpios y una presentación que se ve tan bien como sabe.
+          </p>
+          <div class="about-badges">
+            <span class="chip">Hookahs listas para usar</span>
+            <span class="chip">Setups para lounges</span>
+            <span class="chip">Sabores seleccionados</span>
+            <span class="chip">Atención personalizada</span>
+          </div>
+        </div>
+
+        <div class="about-tilted-wrapper">
+          <figure class="tilted-card-figure" id="about-tilted-card">
+            <div class="tilted-card-inner">
+              <img
+                src="images/tapias-logo-purple.jpg"
+                alt="Tapia's Hookah logo y setup"
+                class="tilted-card-img"
+              />
+              <div class="tilted-card-caption">
+                Tapia's Hookah · Curaçao
+              </div>
+            </div>
+            <div class="tilted-card-mobile-alert">
+              En escritorio verás este bloque con efecto 3D al mover el mouse.
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="section section-contact">
+      <div class="contact-inner fade-in-up">
+        <div class="contact-text">
+          <p class="section-tag">Contacto</p>
+          <h2>¿Listo para encender la noche?</h2>
+          <p>
+            Cuéntanos qué tipo de experiencia buscas y te ayudamos a elegir la hookah,
+            combo o setup perfecto para ti.
+          </p>
+
+          <div class="contact-actions">
+            <a href="https://wa.me/59996602799" class="btn-primary hover-3d" target="_blank" rel="noopener">
+              Escribir por WhatsApp
+            </a>
+            <a href="mailto:contacto@tapiashookah.com" class="btn-ghost hover-3d">
+              Enviar correo
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="telefono">WhatsApp / Teléfono</label>
+            <input type="tel" id="telefono" placeholder="+599...">
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="4" placeholder="Quiero una hookah para..."></textarea>
+          </div>
+          <button type="submit" class="btn-secondary hover-3d disabled-btn" disabled>
+            Enviar (demo)
+          </button>
+          <p class="form-note">
+            *Este formulario es de demostración. Usa WhatsApp para pedidos reales.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Tapia's Hookah. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Menú móvil + Staggered Menu overlay
+    const toggle = document.querySelector('.menu-toggle');
+    const staggeredWrapper = document.getElementById('staggered-menu');
+
+    function setMenuOpen(open) {
+      if (!staggeredWrapper || !toggle) return;
+      staggeredWrapper.setAttribute('data-open', open ? 'true' : 'false');
+      staggeredWrapper.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('menu-open', open);
+      toggle.classList.toggle('open', open);
+    }
+
+    if (toggle && staggeredWrapper) {
+      toggle.addEventListener('click', () => {
+        const isOpen = staggeredWrapper.getAttribute('data-open') === 'true';
+        setMenuOpen(!isOpen);
+      });
+    }
+
+    // cerrar cuando se hace click en un link del panel
+    const staggeredPanel = document.getElementById('staggered-menu-panel');
+    if (staggeredPanel) {
+      staggeredPanel.addEventListener('click', (event) => {
+        const link = event.target.closest('.sm-panel-item');
+        if (link) {
+          setMenuOpen(false);
+        }
+      });
+    }
+
+    // cerrar al hacer click fuera del panel blanco
+    if (staggeredWrapper) {
+      staggeredWrapper.addEventListener('click', (event) => {
+        if (event.target === staggeredWrapper) {
+          setMenuOpen(false);
+        }
+      });
+    }
+
+    // Intro de video con humo real (corta: 3.5s)
+    const introOverlay = document.getElementById('intro-overlay');
+    const introVideos = document.querySelectorAll('.intro-video');
+
+    function hideIntro() {
+      if (!introOverlay || introOverlay.classList.contains('is-hidden')) return;
+      introOverlay.classList.add('is-hidden');
+      document.body.classList.add('page-ready');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      introVideos.forEach(video => {
+        if (!video) return;
+        video.muted = true;
+        video.playsInline = true;
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Si el navegador bloquea el autoplay, igual dejamos la intro corta
+          });
+        }
+      });
+
+      // Intro máxima de ~3.5 segundos
+      setTimeout(hideIntro, 3500);
+    });
+
+    // Efecto tilt 3D en tarjetas (incluye la portada y futuras cards)
+    const tiltCards = document.querySelectorAll('.card-hover-3d');
+    if (tiltCards.length) {
+      const limit = 12;
+
+      tiltCards.forEach((card) => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          const rotateX = (-y * limit).toFixed(2);
+          const rotateY = (x * limit).toFixed(2);
+          card.style.transform =
+            `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    // Parallax pseudo-3D en el hero (texto y portada a distinta profundidad)
+    const parallaxLayers = document.querySelectorAll('.parallax-layer[data-depth]');
+    const heroSection = document.getElementById('hero');
+
+    if (heroSection && parallaxLayers.length) {
+      const updateParallax = () => {
+        const rect = heroSection.getBoundingClientRect();
+        const viewportH = window.innerHeight || 1;
+        const centerOffset = (rect.top + rect.height / 2) - viewportH / 2;
+        const progress = Math.max(-1, Math.min(1, centerOffset / viewportH)); // -1 a 1
+
+        parallaxLayers.forEach(layer => {
+          const depth = parseFloat(layer.dataset.depth || '0');
+          const translateY = -progress * depth * 40; // px
+          layer.style.transform = `translate3d(0, ${translateY}px, 0)`;
+        });
+      };
+
+      window.addEventListener('scroll', () => {
+        window.requestAnimationFrame(updateParallax);
+      });
+
+      // Llamada inicial
+      updateParallax();
+    }
+
+// Glow que sigue el mouse en el hero (mouse animation extra)
+    const hero = document.getElementById('hero');
+    const heroGlow = document.getElementById('hero-mouse-glow');
+
+    if (hero && heroGlow) {
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        heroGlow.style.transform = `translate3d(${x - 110}px, ${y - 110}px, 0)`;
+      });
+
+      hero.addEventListener('mouseleave', () => {
+        heroGlow.style.transform = 'translate3d(-9999px, -9999px, 0)';
+      });
+    }
+
+    // Micro interacción hover 3D en botones y tarjetas
+    const hover3dElems = document.querySelectorAll('.hover-3d, .card-hover-3d');
+    hover3dElems.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        el.classList.add('is-hovered');
+      });
+      el.addEventListener('mouseleave', () => {
+        el.classList.remove('is-hovered');
+      });
+    });
+
+    // Animación de aparición al hacer scroll (scroll reveal)
+    const revealElements = document.querySelectorAll('.fade-in-up');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.18
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: si no hay IntersectionObserver, mostrar todo de una vez
+      revealElements.forEach(el => el.classList.add('is-visible'));
+    }
+
+
+    // Click Spark global - pseudo implementación basada en React Bits
+    // Parámetros equivalentes:
+    // sparkColor = '#fff', sparkSize = 10, sparkRadius = 15, sparkCount = 8, duration = 400ms
+
+    (function() {
+      const SPARK_COLOR = '#fff';
+      const SPARK_SIZE = 10; // px
+      const SPARK_RADIUS = 15; // "radio lógico" que luego mapeamos a píxeles
+      const SPARK_COUNT = 8;
+      const SPARK_DURATION = 400; // ms
+
+      function createClickSpark(x, y) {
+        const container = document.createElement('div');
+        container.className = 'click-spark-container';
+        container.style.left = x + 'px';
+        container.style.top = y + 'px';
+
+        for (let i = 0; i < SPARK_COUNT; i++) {
+          const spark = document.createElement('span');
+          spark.className = 'click-spark';
+          // Dirección aleatoria
+          const angle = Math.random() * Math.PI * 2;
+          const radius = (SPARK_RADIUS + Math.random() * SPARK_RADIUS) * 4; // factor para que se note más
+          const tx = Math.cos(angle) * radius;
+          const ty = Math.sin(angle) * radius;
+          const scale = 0.6 + Math.random() * 0.7;
+
+          spark.style.setProperty('--tx', tx + 'px');
+          spark.style.setProperty('--ty', ty + 'px');
+          spark.style.setProperty('--scale', scale);
+          spark.style.setProperty('--spark-size', SPARK_SIZE + 'px');
+          spark.style.setProperty('--spark-color', SPARK_COLOR);
+          spark.style.setProperty('--spark-duration', SPARK_DURATION + 'ms');
+
+          container.appendChild(spark);
+        }
+
+        document.body.appendChild(container);
+
+        // Eliminamos el contenedor después de la animación
+        window.setTimeout(() => {
+          container.remove();
+        }, SPARK_DURATION + 50);
+      }
+
+      // Activamos en toda la página, excepto elementos que tengan la clase no-spark
+      document.addEventListener('click', (event) => {
+        if (event.button !== 0) return; // solo click izquierdo
+        if (event.target.closest('.no-spark')) return;
+
+        const x = event.clientX;
+        const y = event.clientY;
+        createClickSpark(x, y);
+      }, { passive: true });
+    })();
+
+  </script>
+
+
+  <!-- Scroll Float vanilla JS -->
+  <script>
+    (function() {
+      function setupScrollFloat() {
+        var elements = document.querySelectorAll('.scroll-float');
+        if (!('IntersectionObserver' in window)) {
+          elements.forEach(function(el) {
+            revealImmediate(el);
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              animateElement(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+
+        elements.forEach(function(el) {
+          prepareElement(el);
+          observer.observe(el);
+        });
+      }
+
+      function prepareElement(el) {
+        if (el.dataset.sfPrepared === '1') return;
+        var text = el.textContent;
+        el.textContent = '';
+        var wrapper = document.createElement('span');
+        wrapper.className = 'scroll-float-text';
+        var delayStep = parseFloat(el.getAttribute('data-sf-stagger')) || 0.03;
+
+        for (var i = 0; i < text.length; i++) {
+          var span = document.createElement('span');
+          span.className = 'sf-char';
+          if (text[i] === ' ') span.innerHTML = '&nbsp;';
+          else span.textContent = text[i];
+          span.style.transitionDelay = (i * delayStep) + 's';
+          wrapper.appendChild(span);
+        }
+
+        el.appendChild(wrapper);
+        el.dataset.sfPrepared = '1';
+      }
+
+      function animateElement(el) {
+        var chars = el.querySelectorAll('.sf-char');
+        chars.forEach(function(ch) {
+          ch.classList.add('sf-visible');
+        });
+      }
+
+      function revealImmediate(el) {
+        var chars = el.querySelectorAll('.sf-char');
+        chars.forEach(function(ch) {
+          ch.style.opacity = 1;
+          ch.style.transform = 'none';
+        });
+      }
+
+      window.addEventListener('DOMContentLoaded', setupScrollFloat);
+    })();
+  </script>
+
+
+<script>
+// Liquid Ether-like animated background for hero section (vanilla JS approximation)
+(function() {
+  function initLiquidEtherHero() {
+    var hero = document.getElementById('hero');
+    if (!hero) return;
+
+    var canvas = document.createElement('canvas');
+    canvas.id = 'liquid-ether-bg';
+    canvas.className = 'liquid-ether-canvas';
+    hero.insertBefore(canvas, hero.firstChild);
+
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var mouse = { x: 0.5, y: 0.3 };
+    var blobs = [];
+    var blobColors = ['#3B1F5F', '#7C3AED', '#F59E0B'];
+
+    function createBlobs() {
+      blobs = [];
+      for (var i = 0; i < 3; i++) {
+        blobs.push({
+          x: 0.3 + i * 0.25,
+          y: 0.4 + (i === 1 ? -0.1 : 0.1),
+          r: 0.45,
+          vx: (Math.random() * 0.2 - 0.1) * 0.02,
+          vy: (Math.random() * 0.2 - 0.1) * 0.02,
+          color: blobColors[i % blobColors.length]
+        });
+      }
+    }
+
+    function resize() {
+      var rect = hero.getBoundingClientRect();
+      var width = rect.width || window.innerWidth;
+      var height = rect.height || window.innerHeight * 0.9;
+
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function handleMouseMove(e) {
+      var rect = hero.getBoundingClientRect();
+      mouse.x = (e.clientX - rect.left) / rect.width;
+      mouse.y = (e.clientY - rect.top) / rect.height;
+    }
+
+    hero.addEventListener('mousemove', handleMouseMove);
+
+    window.addEventListener('resize', resize);
+    resize();
+    createBlobs();
+
+    function draw() {
+      var w = canvas.width / dpr;
+      var h = canvas.height / dpr;
+      if (!w || !h) {
+        requestAnimationFrame(draw);
+        return;
+      }
+
+      ctx.clearRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = 'rgba(2,0,10,0.94)';
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.globalCompositeOperation = 'lighter';
+
+      for (var i = 0; i < blobs.length; i++) {
+        var b = blobs[i];
+
+        // move blobs slowly
+        b.x += b.vx;
+        b.y += b.vy;
+
+        // slight attraction to mouse
+        b.x += (mouse.x - b.x) * 0.01;
+        b.y += (mouse.y - b.y) * 0.01;
+
+        if (b.x < -0.2 || b.x > 1.2) b.vx *= -1;
+        if (b.y < -0.2 || b.y > 1.2) b.vy *= -1;
+
+        var x = b.x * w;
+        var y = b.y * h;
+        var radius = b.r * Math.max(w, h);
+
+        var grad = ctx.createRadialGradient(x, y, radius * 0.08, x, y, radius);
+        grad.addColorStop(0, b.color + 'CC');
+        grad.addColorStop(0.4, b.color + '44');
+        grad.addColorStop(1, 'rgba(0,0,0,0)');
+
+        ctx.fillStyle = grad;
+        ctx.fillRect(x - radius, y - radius, radius * 2, radius * 2);
+      }
+
+      ctx.globalCompositeOperation = 'source-over';
+      requestAnimationFrame(draw);
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLiquidEtherHero);
+  } else {
+    initLiquidEtherHero();
+  }
+})();
+
+// ===== Galaxy background for categorías (canvas 2D starfield) =====
+(function() {
+  const container = document.getElementById('galaxy-bg');
+  if (!container) return;
+
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  container.appendChild(canvas);
+
+  let width = 0;
+  let height = 0;
+  let dpr = window.devicePixelRatio || 1;
+
+  function resize() {
+    width = container.clientWidth || window.innerWidth;
+    height = container.clientHeight || 400;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  const STAR_COUNT = 260;
+  const stars = [];
+
+  for (let i = 0; i < STAR_COUNT; i++) {
+    // bias a poco hacia el centro
+    const rx = Math.random();
+    const ry = Math.random();
+    const bx = (rx - 0.5) * (Math.random() * 0.4 + 0.6) + 0.5;
+    const by = (ry - 0.5) * (Math.random() * 0.4 + 0.6) + 0.5;
+
+    stars.push({
+      x: bx,
+      y: by,
+      r: Math.random() * 1.1 + 0.3,
+      phase: Math.random() * Math.PI * 2,
+      speed: 0.8 + Math.random() * 1.2,
+      baseAlpha: 0.18 + Math.random() * 0.35
+    });
+  }
+
+  let t = 0;
+  function draw() {
+    if (!width || !height) return;
+
+    ctx.clearRect(0, 0, width, height);
+
+    // fondo muy oscuro con leve degradado violeta
+    const bgGrad = ctx.createRadialGradient(
+      width * 0.5,
+      height * 0.0,
+      0,
+      width * 0.5,
+      height * 1.0,
+      Math.max(width, height)
+    );
+    bgGrad.addColorStop(0, 'rgba(5,5,9,1)');
+    bgGrad.addColorStop(0.45, 'rgba(7,5,16,0.98)');
+    bgGrad.addColorStop(1, 'rgba(2,2,6,1)');
+    ctx.fillStyle = bgGrad;
+    ctx.fillRect(0, 0, width, height);
+
+    stars.forEach((s) => {
+      const x = s.x * width;
+      const y = s.y * height;
+      const twinkle = 0.5 + 0.5 * Math.sin(t * 0.002 * s.speed + s.phase);
+      const alpha = s.baseAlpha * twinkle;
+
+      const r = s.r;
+
+      const g = ctx.createRadialGradient(x, y, 0, x, y, r * 4.0);
+      // centro cálido brillante, borde suave
+      g.addColorStop(0, `rgba(255,246,210,${alpha})`);
+      g.addColorStop(0.4, `rgba(245,232,190,${alpha * 0.8})`);
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(x, y, r * 4.0, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    t += 16;
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+
+// ===== Tilted card effect for About section (desktop only) =====
+(function() {
+  const figure = document.getElementById('about-tilted-card');
+  if (!figure) return;
+
+  const inner = figure.querySelector('.tilted-card-inner');
+  if (!inner) return;
+
+  const caption = figure.querySelector('.tilted-card-caption');
+
+  let rect = null;
+  let hover = false;
+
+  function updateRect() {
+    rect = inner.getBoundingClientRect();
+  }
+  updateRect();
+  window.addEventListener('resize', updateRect);
+
+  function onMove(e) {
+    if (!rect || window.innerWidth < 768) return;
+    hover = true;
+    figure.classList.add('is-hovered');
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateAmp = 8;
+    const percentX = (x - centerX) / centerX;
+    const percentY = (y - centerY) / centerY;
+
+    const clampedX = Math.max(-1, Math.min(1, percentX));
+    const clampedY = Math.max(-1, Math.min(1, percentY));
+    const rotX = -clampedY * rotateAmp;
+    const rotY = clampedX * rotateAmp;
+
+    inner.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.04)`;
+
+    if (caption) {
+      const capX = Math.max(18, Math.min(rect.width - 18, x));
+      const capY = Math.max(12, Math.min(rect.height - 12, y));
+      caption.style.left = capX + 'px';
+      caption.style.top = capY + 'px';
+    }
+  }
+
+  function onLeave() {
+    hover = false;
+    figure.classList.remove('is-hovered');
+    inner.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+  }
+
+  figure.addEventListener('mousemove', onMove);
+  figure.addEventListener('mouseleave', onLeave);
+})();
+
+</script>
+
+</body>
+</html>
